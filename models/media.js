@@ -7,12 +7,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
        this.belongsTo(models.Product, {
          foreignKey: "product_id",
+        targetKey:"id"
        });
     }
   }
   Media.init(
     {
-      product_id: {
+      productId: {
         type: DataTypes.UUID,
         allowNull: false,
         references: {
@@ -28,8 +29,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       paranoid: true,
-      modelName: "media",
-      tableName: "Media",
+      modelName: "Media",
+      tableName: "media",
     }
   );
   return Media;

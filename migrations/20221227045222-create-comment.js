@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("comments", {
+    await queryInterface.createTable("comment", {
       id: {
         allowNull: false,
         primaryKey: true,
@@ -12,6 +12,10 @@ module.exports = {
       product_id: {
         type: Sequelize.UUID,
         allowNull: false,
+        references: {
+          model: "product",
+          key: "id",
+        }
       },
       comment: {
         type: Sequelize.STRING,
@@ -35,6 +39,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('comments');
+    await queryInterface.dropTable('comment');
   }
 };

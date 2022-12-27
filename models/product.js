@@ -2,7 +2,6 @@
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
-  
     static associate(models) {
       this.hasMany(models.ProductDataMapping, {
         foreignKey: "product_id",
@@ -31,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       offer: {
         type: Sequelize.INTEGER,
       },
-      sku_id: {
+      skuId: {
         type: Sequelize.STRING,
         allowNull: false,
         isAlpha: true,
@@ -40,8 +39,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       paranoid: true,
-      modelName: "product",
-      tableName: "Product",
+      modelName: "Product",
+      tableName: "product",
     }
   );
   return Product;

@@ -7,29 +7,31 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.belongsTo(models.Product, {
         foreignKey: "product_id",
+        targetKey: "id",
       }),
         this.belongsTo(models.ItemField, {
           foreignKey: "item_id",
+          targetKey: "id",
         });
     }
   }
   ProductDataMapping.init(
     {
-      product_id: {
+      productId: {
         type: Sequelize.UUID,
         allowNull: false,
         references: {
-          model: 'product',
-          key:'id'
-        }
+          model: "product",
+          key: "id",
+        },
       },
-      item_id: {
+      itemId: {
         type: Sequelize.UUID,
         allowNull: false,
         references: {
-          model: 'itemField',
-          key:"id"
-        }
+          model: "item_field",
+          key: "id",
+        },
       },
       value: {
         type: Sequelize.STRING,
@@ -39,8 +41,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       paranoid: true,
-      modelName: "product_data_mapping",
-      tableName: "ProductDataMapping",
+      modelName: "ProductDataMapping",
+      tableName: "product_data_mapping",
     }
   );
   return ProductDataMapping;

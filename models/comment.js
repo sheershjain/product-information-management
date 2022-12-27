@@ -7,12 +7,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.belongsTo(models.Product, {
         foreignKey: "product_id",
+        targetKey:'id'
       });
     }
   }
   Comment.init(
     {
-      product_id: {
+      productId: {
         type: DataTypes.UUID,
         allowNull: false,
         references: {

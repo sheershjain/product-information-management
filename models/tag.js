@@ -7,21 +7,22 @@ module.exports = (sequelize, DataTypes) => {
    
     static associate(models) {
       this.belongsTo(models.Product, {
-        foreignKey:'product_id'
+        foreignKey: 'product_id',
+        targetKey:'id'
       })
     }
   }
   Tag.init(
     {
-      product_id: {
+      productId: {
         type: Sequelize.UUID,
         allowNull: false,
         references: {
           model: 'product',
-          key:id
+          key:'id'
         }
       },
-      tag_name: {
+      tagName: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -29,8 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       paranoid: true,
-      modelName: "tag",
-      tableName: "Tag",
+      modelName: "Tag",
+      tableName: "tag",
     }
   );
   return Tag;

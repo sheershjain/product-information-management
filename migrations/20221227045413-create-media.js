@@ -12,6 +12,10 @@ module.exports = {
       product_id: {
         type: Sequelize.UUID,
         allowNull: false,
+        references: {
+          model: "product",
+          key: "id",
+        },
       },
       photo_link: {
         type: Sequelize.STRING,
