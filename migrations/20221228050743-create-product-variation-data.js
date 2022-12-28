@@ -1,38 +1,24 @@
-"use strict";
+'use strict';
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("product", {
+    await queryInterface.createTable("product_variation_data", {
       id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
         defaultValue: Sequelize.literal("uuid_generate_v4()"),
       },
-      name: {
+      product_variation_id: {
+        type: Sequelize.UUID,
+        references: {
+          model: "product_variation",
+          key:'id'
+
+        },
+      },
+      data_value: {
         type: Sequelize.STRING,
-        allowNull: false,
-      },
-      price: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      offer: {
-        type: Sequelize.INTEGER,
-      },
-      sku_id: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        isAlpha: true,
-      },
-      matrix_product: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false,
-      },
-      model_id: {
-        type: Sequelize.STRING,
-        allowNull: false,
       },
       created_at: {
         allowNull: false,
@@ -52,6 +38,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("product");
-  },
+    await queryInterface.dropTable('product_variation_data');
+  }
 };

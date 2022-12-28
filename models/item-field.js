@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class ItemField extends Model {
     static associate(models) {
       this.hasMany(models.ProductDataMapping, {
-        foreignKey: "item_id"
+        foreignKey: "item_id",
       });
     }
   }
