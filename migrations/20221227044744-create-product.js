@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -25,17 +25,14 @@ module.exports = {
         allowNull: false,
         isAlpha: true,
       },
-      imageType: {
-        type: Sequelize.ENUM,
-        value: ['simple', 'matrix'],
-        defaultValue: 'simple',
-        allowNull:false
+      matrix_product: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
       },
       model_id: {
-        type: {
-          type: DataTypes.STRING,
-          allowNull: false
-        }
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       created_at: {
         allowNull: false,
@@ -55,6 +52,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('product');
-  }
+    await queryInterface.dropTable("product");
+  },
 };

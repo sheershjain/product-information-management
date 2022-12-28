@@ -46,18 +46,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         isAlpha: true,
       },
-      imageType: {
-        type: DataTypes.ENUM,
-        value: ['simple', 'matrix'],
-        defaultValue: 'simple',
-        allowNull:false
+      MatrixProduct: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
       },
       modelId: {
         type: {
           type: DataTypes.STRING,
-          allowNull:false
-        }
-      }
+          allowNull: false,
+        },
+      },
     },
     {
       sequelize,
