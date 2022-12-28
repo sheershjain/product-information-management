@@ -1,11 +1,10 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Media extends Model {
+  class ProductVariation extends Model {
     static associate(models) {
-      this.belongsTo(models.Product, {
-        foreignKey: "product_id",
-        targetKey: "id",
+      this.hasMany(models.ProductVariationData, {
+        foreignKey: "product_variation_id",
       });
     }
     toJSON() {
@@ -17,17 +16,9 @@ module.exports = (sequelize, DataTypes) => {
       };
     }
   }
-  Media.init(
+  ProductVariation.init(
     {
-      productId: {
-        type: DataTypes.UUID,
-        allowNull: false,
-        references: {
-          model: "product",
-          key: "id",
-        },
-      },
-      photoLink: {
+      ProductName: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -35,9 +26,9 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       paranoid: true,
-      modelName: "Media",
-      tableName: "media",
+      tableName: "product_variation",
+      modelName: "ProductVariation",
     }
   );
-  return Media;
+  return ProductVariation;
 };

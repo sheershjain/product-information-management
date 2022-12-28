@@ -1,2 +1,5 @@
 .env
 node_modules
+scrap-data
+helper
+middlewares

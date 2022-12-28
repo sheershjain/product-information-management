@@ -1,11 +1,15 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Media extends Model {
+  class ProductVariationDataMapping extends Model {
     static associate(models) {
       this.belongsTo(models.Product, {
         foreignKey: "product_id",
         targetKey: "id",
+      });
+      this.belongsTo(models.ProductVariationData, {
+        foreignKey: "product_variation_data_id",
+        targetKey:"id"
       });
     }
     toJSON() {
@@ -17,9 +21,9 @@ module.exports = (sequelize, DataTypes) => {
       };
     }
   }
-  Media.init(
+  ProductVariationDataMapping.init(
     {
-      productId: {
+      ProductId: {
         type: DataTypes.UUID,
         allowNull: false,
         references: {
@@ -27,17 +31,26 @@ module.exports = (sequelize, DataTypes) => {
           key: "id",
         },
       },
-      photoLink: {
-        type: DataTypes.STRING,
+      ProductVariationDataId: {
+        type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+          model: "product_variation_data",
+          key: "id",
+        },
+      },
+      additional_price: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0,
       },
     },
     {
       sequelize,
       paranoid: true,
-      modelName: "Media",
-      tableName: "media",
+      tableName: "product_variation_data_mapping",
+      modelName: "ProductVariationDataMapping",
     }
   );
-  return Media;
+  return ProductVariationDataMapping;
 };

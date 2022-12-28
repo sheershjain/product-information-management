@@ -1,29 +1,34 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Tag extends Model {
-   
     static associate(models) {
       this.belongsTo(models.Product, {
-        foreignKey: 'product_id',
-        targetKey:'id'
-      })
+        foreignKey: "product_id",
+        targetKey: "id",
+      });
+    }
+    toJSON() {
+      return {
+        ...this.get(),
+        createdAt: undefined,
+        updatedAt: undefined,
+        deletedAt: undefined
+      };
     }
   }
   Tag.init(
     {
       productId: {
-        type: Sequelize.UUID,
+        type: DataTypes.UUID,
         allowNull: false,
         references: {
-          model: 'product',
-          key:'id'
-        }
+          model: "product",
+          key: "id",
+        },
       },
       tagName: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
       },
     },

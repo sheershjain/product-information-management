@@ -15,26 +15,49 @@ module.exports = (sequelize, DataTypes) => {
         this.hasMany(models.Tag, {
           foreignKey: "product_id",
         });
+      this.hasMany(models.ProductVariationDataMapping, {
+        foreignKey:"product_id"
+      })
+    }
+    toJSON() {
+      return {
+        ...this.get(),
+        createdAt: undefined,
+        updatedAt: undefined,
+        deletedAt: undefined,
+      };
     }
   }
   Product.init(
     {
       name: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       price: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       offer: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
       },
       skuId: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
         isAlpha: true,
       },
+      imageType: {
+        type: DataTypes.ENUM,
+        value: ['simple', 'matrix'],
+        defaultValue: 'simple',
+        allowNull:false
+      },
+      modelId: {
+        type: {
+          type: DataTypes.STRING,
+          allowNull:false
+        }
+      }
     },
     {
       sequelize,

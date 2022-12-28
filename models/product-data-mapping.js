@@ -14,11 +14,20 @@ module.exports = (sequelize, DataTypes) => {
           targetKey: "id",
         });
     }
+    toJSON() {
+      return {
+        ...this.get(),
+        createdAt: undefined,
+        updatedAt: undefined,
+        deletedAt: undefined,
+       
+      };
+    }
   }
   ProductDataMapping.init(
     {
       productId: {
-        type: Sequelize.UUID,
+        type: DataTypes.UUID,
         allowNull: false,
         references: {
           model: "product",
@@ -26,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       itemId: {
-        type: Sequelize.UUID,
+        type: DataTypes.UUID,
         allowNull: false,
         references: {
           model: "item_field",
@@ -34,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       value: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
       },
     },

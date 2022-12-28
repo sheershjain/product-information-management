@@ -3,11 +3,14 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Comment extends Model {
+  class ProductVariationData extends Model {
     static associate(models) {
-      this.belongsTo(models.Product, {
-        foreignKey: "product_id",
-        targetKey: "id",
+      this.belongsTo(models.ProductVariation, {
+        foreignKey: "product_variation_id",
+        targetKey:"id"
+      });
+      this.hasMany(models.ProductVariationDataMapping, {
+        foreignKey: "product_variation_data_id",
       });
     }
     toJSON() {
@@ -19,27 +22,27 @@ module.exports = (sequelize, DataTypes) => {
       };
     }
   }
-  Comment.init(
+  ProductVariationData.init(
     {
-      productId: {
+      ProductVariationId: {
         type: DataTypes.UUID,
         allowNull: false,
         references: {
-          model: "product",
+          model: "product_variation",
           key: "id",
         },
       },
-      comment: {
+      DataValue: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull:false
       },
     },
     {
       sequelize,
       paranoid: true,
-      tableName: "comment",
-      modelName: "Comment",
+      tableName: "product_variation_data",
+      modelName: "ProductVariationData",
     }
   );
-  return Comment;
+  return ProductVariationData;
 };
