@@ -7,14 +7,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "product_variation_id",
       });
     }
-    toJSON() {
-      return {
-        ...this.get(),
-        createdAt: undefined,
-        updatedAt: undefined,
-        deletedAt: undefined,
-      };
-    }
   }
   ProductVariation.init(
     {

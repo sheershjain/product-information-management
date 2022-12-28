@@ -9,14 +9,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "item_id",
       });
     }
-    toJSON() {
-      return {
-        ...this.get(),
-        createdAt: undefined,
-        updatedAt: undefined,
-        deletedAt: undefined,
-      };
-    }
   }
   ItemField.init(
     {

@@ -14,15 +14,7 @@ module.exports = (sequelize, DataTypes) => {
           targetKey: "id",
         });
     }
-    toJSON() {
-      return {
-        ...this.get(),
-        createdAt: undefined,
-        updatedAt: undefined,
-        deletedAt: undefined,
-       
-      };
-    }
+
   }
   ProductDataMapping.init(
     {

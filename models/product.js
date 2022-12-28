@@ -19,14 +19,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey:"product_id"
       })
     }
-    toJSON() {
-      return {
-        ...this.get(),
-        createdAt: undefined,
-        updatedAt: undefined,
-        deletedAt: undefined,
-      };
-    }
   }
   Product.init(
     {
