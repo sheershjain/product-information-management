@@ -1,48 +1,42 @@
-const { writeFile } = require("fs/promises");
-const axios = require("axios");
+const { eachOfLimit } =require("async");
+const axios =require("axios");
+const { writeFile } =require("fs/promises");
 
-// writeStream.write("title","category","numberOfColors","price","imageUrl","\n");
-const main = async () => {
+const scrapData = async () => {
   const { data } = await axios.get(
     "https://www.adidas.co.in/api/plp/content-engine?query=men-new_arrivals"
   );
-  const items = data.raw.itemList.items;
-  // console.log(items.length);
-  const itemData = items.slice(0, 3).map(function (element) {
-    return {
-      title: element.subTitle,
-      imgUrl: element.image.src,
-      size: element.availableSizes,
-      price: element.price,
-      colorVariations: element.colorVariations,
-    };
-  });
-  for (let i = 0; i < itemData.length; i++) {
-    // if (!item) continue;
-    const item = itemData[i];
-    // console.log(item.colorVariations.length);
-    if (item.colorVariations.length) {
-      const variants = item.colorVariations;
-      for (let j = 0; j < variants.length; j++) {
-        // console.log(variants[j]);
-        const { data: variantData } = await axios.get(
-          "https://www.adidas.co.in/api/search/product/" + variants[j]
-        );
-        // if (variantData.message === "Product not found") continue;
 
-        // console.log(variantData.error);
-        variants[j] = {
+  const items = data.raw.itemList.items.map((item) => ({
+    availableSizes: item.availableSizes,
+    category: item.category,
+    colorVariations: item.colorVariations,
+    name: item.displayName,
+    image: item.image.src,
+    modelId: item.modelId,
+    price: item.price,
+    productId: item.productId,
+  }));
+  await eachOfLimit(items, 10, async (item, i) => {
+    item.variants = [];
+    await eachOfLimit(item.colorVariations, 10, async (productId, j) => {
+      try {
+        const { data: variantData } = await axios.get(
+          `https://www.adidas.co.in/api/search/product/${productId}`
+          );
+          console.log(`${i}--${j}`);
+        item.variants.push({
+          productId: variantData.id,
           color: variantData.color,
-          price: variantData.price,
-          imgUrl: variantData.image.src,
+          image: variantData.image.src,
           modelId: variantData.modelId,
-          productId: variantData.productId,
-        };
-      }
-    //   console.log(variants);
-      await writeFile("productData.json", JSON.stringify(variants));
-    }
-  }
+          price: variantData.price,
+        });
+      } catch (error) {}
+    });
+  });
+  await writeFile("data.json", JSON.stringify(items, null, 2));
+  return "true"
 };
 
-main();
+module.exports={scrapData};
