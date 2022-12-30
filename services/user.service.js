@@ -68,10 +68,9 @@ const loginUser = async (payload) => {
   const { email, password } = payload;
   const user = await models.User.findOne({
     where: {
-      email: email
+      email: email,
     },
   });
- console.log("innnnnnnn",user);
   if (!user) {
     throw new Error("User Not Found!");
   }
@@ -116,7 +115,6 @@ const refreshToken = async (refreshToken, userId) => {
 
 const emailFile = async (payload) => {
   try {
-    console.log(payload.email);
     const user = await models.User.findOne({
       where: { email: payload.email },
     });
@@ -132,7 +130,6 @@ const emailFile = async (payload) => {
   }
 };
 const createUser = async (payload) => {
-  console.log("------------",payload);
   payload.password = await bcrypt.hash(payload.password, 10);
   const existingUser = await models.User.findOne({
     where: { email: payload.email },
@@ -204,7 +201,7 @@ const userDetailById = async (payload) => {
   if (!data) {
     throw new Error("User Doesn't exists");
   }
-  return data
+  return data;
 };
 
 module.exports = {
@@ -217,5 +214,5 @@ module.exports = {
   deactivateUser,
   userDetail,
   detailById,
-  userDetailById
+  userDetailById,
 };

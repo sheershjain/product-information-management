@@ -3,7 +3,6 @@ const userService = require("../services/user.service");
 
 const loginUser = async (req, res, next) => {
   try {
-    console.log("--------------",req);
     const { body: payload } = req;
    const data = await userService.loginUser(payload);
     res.data = data;
@@ -54,7 +53,6 @@ const mailParse = async (req, res, next) => {
     res.data = data;
     next();
   } catch (error) {
-    console.log("in catch", error);
     commonErrorHandler(req, res, error.message, 400, error);
   }
 };

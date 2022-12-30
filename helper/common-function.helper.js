@@ -1,7 +1,6 @@
 const { commonErrorHandler } = require("./error-handler.helper");
 
 const validateRequest = (req, res, next, schema, requestParamterType) => {
-  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
   let requestData = {};
   if (requestParamterType === "body") {
     requestData = req.body;

@@ -24,7 +24,6 @@ const scrapData = async () => {
         const { data: variantData } = await axios.get(
           `https://www.adidas.co.in/api/search/product/${productId}`
           );
-          console.log(`${i}--${j}`);
         item.variants.push({
           productId: variantData.id,
           color: variantData.color,

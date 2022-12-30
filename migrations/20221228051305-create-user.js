@@ -16,18 +16,20 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
+        validate: {
+          isEmail: true,
+        },
       },
       role: {
         type: Sequelize.STRING,
         allowNull: false,
-      },
-      designation: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        defaultValue:'USR'
       },
       password: {
         type: Sequelize.STRING,
         allowNull: false,
+        isAlphanumeric: true,
       },
       created_at: {
         allowNull: false,
