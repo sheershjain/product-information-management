@@ -70,7 +70,7 @@ router.get(
   genericResponse.sendResponse
 );
 
-router.put(
+router.post(
   "/add-data",
   checkAccessToken,
   checkRole,
@@ -97,4 +97,37 @@ router.patch(
   genericResponse.sendResponse
 );
 
+router.post(
+  "/new-item-field",
+  checkAccessToken,
+  checkRole,
+  validator.itemField.newAttributeAdd,
+  controller.itemField.newAttributeAdd,
+  genericResponse.sendResponse
+);
+
+router.patch(
+  "/update-item-field",
+  checkAccessToken,
+  checkRole,
+  validator.itemField.updateAttribute,
+  controller.itemField.updateAttribute,
+  genericResponse.sendResponse
+)
+router.delete(
+  "/deactivate-item-field",
+  checkAccessToken,
+  checkRole,
+  validator.itemField.commonValidator,
+  controller.itemField.deactivateAttribute,
+  genericResponse.sendResponse
+)
+router.patch(
+  "/enable-item-field",
+  checkAccessToken,
+  checkRole,
+  validator.itemField.commonValidator,
+  controller.itemField.enableAttribute,
+  genericResponse.sendResponse
+);
 module.exports = router;
