@@ -1,22 +1,7 @@
-const { commonErrorHandler } = require("../helper/error-handler.helper");
-const { mapperService } = require("../services/mapper.service");
 const models = require("../models");
-const { sequelize } = require("../models");
-//
 const main = async () => {
   const product = {
-    availableSizes: [
-      "11",
-      "12",
-      "hidden",
-      "7",
-      "8",
-      "9",
-      "7.5",
-      "8.5",
-      "10",
-      "9.5",
-    ],
+    availableSizes: ["11", "12", "7", "8", "9", "7.5", "8.5", "10", "9.5"],
     category: "shoes",
     colorVariations: ["H01878", "H01877"],
     name: "Samba Vegan Shoes",
@@ -50,92 +35,128 @@ const main = async () => {
       where: { sku_id: product.modelId },
     });
     if (val) {
-      console.log("already exists");
+      throw new Error("Product already exists");
     }
 
-    const data1 = await models.Product.create({
+    let mainProduct = await models.Product.create({
       name: product.name,
-      sku_id: product.modelId,
+      skuId: product.modelId,
       price: product.price,
     });
-   console.log("22222222222222222222222222");
+
+    const childProducts = [];
+
     if (product.availableSizes.length) {
       let ProductVariationId = (
-        await models.ProductVariation.findOne({ where: { name: "size" } })
+        await models.ProductVariation.findOne({
+          where: { ProductVariationName: "size" },
+        })
       ).id;
       for (let i = 0; i < product.availableSizes.length; i++) {
-        let size = await models.ProductVariationData.findOne({
-          where: {
-            data_value: product.availableSizes[i],
-            product_variation_id: ProductVariationId,
-          },
-        });
-        if (!size) {
-          size = await models.ProductVariationData.create({
-            data_value: product.availableSizes[i],
-            product_variation_id: ProductVariationId,
+        const avlSize = product.availableSizes[i];
+        if (avlSize) {
+          if (!mainProduct.matrixProduct) {
+            mainProduct.set({
+              matrixProduct: true,
+            });
+            mainProduct = await mainProduct.save();
+          }
+          let size = (
+            await models.ProductVariationData.findOne({
+              where: {
+                DataValue: avlSize,
+                ProductVariationId: ProductVariationId,
+              },
+            })
+          )?.id;
+          if (!size) {
+            size = (
+              await models.ProductVariationData.create({
+                DataValue: avlSize,
+                ProductVariationId: ProductVariationId,
+              })
+            ).id;
+          }
+          await models.ProductVariationDataMapping.create({
+            ProductVariationDataId: size,
+            ProductId: mainProduct.id,
+            AdditionalPrice: 0,
           });
-        }
-        const val2 = await models.ProductVariationData.create({
-          product_variation_data_id: size.id,
-          product_id: data1.id,
-          additional_price: 0,
-        });
-      }
-      ProductVariationId = (
-        await models.ProductVariation.findOne({ where: { name: "color" } })
-      ).id;
-      for (let i = 0; i < product.variants.length; i++) {
-        let color = await models.ProductVariationData.findOne({
-          where: {
-            data_value: product.variants.color[i],
-            product_variation_id: ProductVariationId,
-          },
-        });
-        let price = product.variants.price - data1.price;
-        if (!color) {
-          const val1 = await models.ProductVariationData.create({
-            data_value: product.variants.color[i],
-            product_variation_id: ProductVariationId,
-            additional_price: price,
+
+          const childProduct = await models.Product.create({
+            name: product.name,
+            skuId: avlSize,
+            price: product.price,
+            modelId: mainProduct.id,
+            matrixProduct: true,
           });
+          await models.ProductVariationDataMapping.create({
+            ProductVariationDataId: size,
+            ProductId: childProduct.id,
+            AdditionalPrice: 0,
+          });
+          childProducts.push(childProduct);
         }
-      }
-      let product_variation_data_mapping =
-        await models.ProductVariationDataMapping.findOne({
-          where: {
-            product_id: data1.id,
-            product_variation_data_id: val1.id,
-          },
-        });
-      if (!product_variation_data_mapping) {
-        await models.ProductVariationDataMapping.create({
-          where: {
-            product_id: data1.id,
-            product_variation_data_id: val1.id,
-          },
-        });
-      }
-      product_variation_data_mapping =
-        await models.ProductVariationDataMapping.findOne({
-          where: {
-            product_id: data1.id,
-            product_variation_data_id: val2.id,
-          },
-        });
-      if (!product_variation_data_mapping) {
-        await models.ProductVariationDataMapping.create({
-          where: {
-            product_id: data1.id,
-            product_variation_data_id: val2.id,
-          },
-        });
       }
     }
-      return "All okay!!"
+
+    if (product.variants.length) {
+      let ProductVariationId = (
+        await models.ProductVariation.findOne({
+          where: { ProductVariationName: "color" },
+        })
+      ).id;
+      for (let i = 0; i < product.variants.length; i++) {
+        const colorVariant = product.variants[i].color;
+        if (colorVariant) {
+          let color = (
+            await models.ProductVariationData.findOne({
+              where: {
+                DataValue: colorVariant,
+                ProductVariationId: ProductVariationId,
+              },
+            })
+          )?.id;
+          if (!color) {
+            color = (
+              await models.ProductVariationData.create({
+                DataValue: colorVariant,
+                ProductVariationId: ProductVariationId,
+              })
+            ).id;
+          }
+          await models.ProductVariationDataMapping.create({
+            ProductVariationDataId: color,
+            ProductId: mainProduct.id,
+            AdditionalPrice:
+              mainProduct.price - (product.variants[i].price || 0),
+          });
+          for (let j = 0; j < childProducts.length; j++) {
+            let childProduct = childProducts[j];
+            childProduct.set({
+              skuId:
+                product.variants[i].modelId +
+                "-" +
+                childProduct.skuId +
+                "-" +
+                colorVariant.split(" ").join("_"),
+              price: product.variants[i].price || childProduct.price,
+            });
+            childProduct = await childProduct.save();
+            await models.ProductVariationDataMapping.create({
+              ProductVariationDataId: color,
+              ProductId: childProduct.id,
+              AdditionalPrice:
+                mainProduct.price - (product.variants[i].price || 0),
+            });
+          }
+        }
+      }
+    }
+
+    return "All okay!!";
   } catch (error) {
-      console.log(error);
-      throw new Error(error)
+    throw new Error(error);
   }
 };
 
