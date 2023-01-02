@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   ProductVariation.init(
     {
-      ProductName: {
+      ProductVariationName: {
         type: DataTypes.STRING,
         allowNull: false,
       },

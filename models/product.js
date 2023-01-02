@@ -9,12 +9,6 @@ module.exports = (sequelize, DataTypes) => {
         this.hasMany(models.Media, {
           foreignKey: "product_id",
         }),
-        this.hasMany(models.Comment, {
-          foreignKey: "product_id",
-        }),
-        this.hasMany(models.Tag, {
-          foreignKey: "product_id",
-        });
       this.hasMany(models.ProductVariationDataMapping, {
         foreignKey:"product_id"
       })
@@ -29,9 +23,6 @@ module.exports = (sequelize, DataTypes) => {
       price: {
         type: DataTypes.INTEGER,
         allowNull: false,
-      },
-      offer: {
-        type: DataTypes.INTEGER,
       },
       skuId: {
         type: DataTypes.STRING,
