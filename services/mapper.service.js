@@ -1,5 +1,5 @@
 const models = require("../models");
-const {readFile}= require("fs/promises")
+const { readFile } = require("fs/promises");
 const main = async () => {
   // const product = {
   //   availableSizes: ["11", "12", "7", "8", "9", "7.5", "8.5", "10", "9.5"],
@@ -30,132 +30,133 @@ const main = async () => {
   //     },
   //   ],
   // };
- const product= readFile("../data.json")
+  let product = await readFile("./data.json", { encoding: "utf8" });
+  product=JSON.parse(product)
   try {
-    product.map(async(product) => {
+   await  product.map(async (product) => {
       const val = await models.Product.findOne({
-      where: { sku_id: product.modelId },
-    });
-    if (val) {
-      throw new Error("Product already exists");
-    }
+        where: { sku_id: product.modelId },
+      });
+      if (val) {
+        throw new Error("Product already exists");
+      }
 
-    let mainProduct = await models.Product.create({
-      name: product.name,
-      skuId: product.modelId,
-      price: product.price,
-    });
+      let mainProduct = await models.Product.create({
+        name: product.name,
+        skuId: product.modelId,
+        price: product.price,
+      });
 
-    const childProducts = [];
+      const childProducts = [];
 
-    if (product.availableSizes.length) {
-      let ProductVariationId = (
-        await models.ProductVariation.findOne({
-          where: { ProductVariationName: "size" },
-        })
-      ).id;
-      for (let i = 0; i < product.availableSizes.length; i++) {
-        const avlSize = product.availableSizes[i];
-        if (avlSize) {
-          if (!mainProduct.matrixProduct) {
-            mainProduct.set({
+      if (product.availableSizes.length) {
+        let ProductVariationId = (
+          await models.ProductVariation.findOne({
+            where: { ProductVariationName: "size" },
+          })
+        ).id;
+        for (let i = 0; i < product.availableSizes.length; i++) {
+          const avlSize = product.availableSizes[i];
+          if (avlSize) {
+            if (!mainProduct.matrixProduct) {
+              mainProduct.set({
+                matrixProduct: true,
+              });
+              mainProduct = await mainProduct.save();
+            }
+            let size = (
+              await models.ProductVariationData.findOne({
+                where: {
+                  DataValue: avlSize,
+                  ProductVariationId: ProductVariationId,
+                },
+              })
+            )?.id;
+            if (!size) {
+              size = (
+                await models.ProductVariationData.create({
+                  DataValue: avlSize,
+                  ProductVariationId: ProductVariationId,
+                })
+              ).id;
+            }
+            await models.ProductVariationDataMapping.create({
+              ProductVariationDataId: size,
+              ProductId: mainProduct.id,
+              AdditionalPrice: 0,
+            });
+
+            const childProduct = await models.Product.create({
+              name: product.name,
+              skuId: avlSize,
+              price: product.price,
+              modelId: mainProduct.id,
               matrixProduct: true,
             });
-            mainProduct = await mainProduct.save();
+            await models.ProductVariationDataMapping.create({
+              ProductVariationDataId: size,
+              ProductId: childProduct.id,
+              AdditionalPrice: 0,
+            });
+            childProducts.push(childProduct);
           }
-          let size = (
-            await models.ProductVariationData.findOne({
-              where: {
-                DataValue: avlSize,
-                ProductVariationId: ProductVariationId,
-              },
-            })
-          )?.id;
-          if (!size) {
-            size = (
-              await models.ProductVariationData.create({
-                DataValue: avlSize,
-                ProductVariationId: ProductVariationId,
-              })
-            ).id;
-          }
-          await models.ProductVariationDataMapping.create({
-            ProductVariationDataId: size,
-            ProductId: mainProduct.id,
-            AdditionalPrice: 0,
-          });
-
-          const childProduct = await models.Product.create({
-            name: product.name,
-            skuId: avlSize,
-            price: product.price,
-            modelId: mainProduct.id,
-            matrixProduct: true,
-          });
-          await models.ProductVariationDataMapping.create({
-            ProductVariationDataId: size,
-            ProductId: childProduct.id,
-            AdditionalPrice: 0,
-          });
-          childProducts.push(childProduct);
         }
       }
-    }
 
-    if (product.variants.length) {
-      let ProductVariationId = (
-        await models.ProductVariation.findOne({
-          where: { ProductVariationName: "color" },
-        })
-      ).id;
-      for (let i = 0; i < product.variants.length; i++) {
-        const colorVariant = product.variants[i].color;
-        if (colorVariant) {
-          let color = (
-            await models.ProductVariationData.findOne({
-              where: {
-                DataValue: colorVariant,
-                ProductVariationId: ProductVariationId,
-              },
-            })
-          )?.id;
-          if (!color) {
-            color = (
-              await models.ProductVariationData.create({
-                DataValue: colorVariant,
-                ProductVariationId: ProductVariationId,
+      if (product.variants.length) {
+        let ProductVariationId = (
+          await models.ProductVariation.findOne({
+            where: { ProductVariationName: "color" },
+          })
+        ).id;
+        for (let i = 0; i < product.variants.length; i++) {
+          const colorVariant = product.variants[i].color;
+          if (colorVariant) {
+            let color = (
+              await models.ProductVariationData.findOne({
+                where: {
+                  DataValue: colorVariant,
+                  ProductVariationId: ProductVariationId,
+                },
               })
-            ).id;
-          }
-          await models.ProductVariationDataMapping.create({
-            ProductVariationDataId: color,
-            ProductId: mainProduct.id,
-            AdditionalPrice:
-              mainProduct.price - (product.variants[i].price || 0),
-          });
-          for (let j = 0; j < childProducts.length; j++) {
-            let childProduct = childProducts[j];
-            childProduct.set({
-              skuId:
-                product.variants[i].modelId +
-                "-" +
-                childProduct.skuId +
-                "-" +
-                colorVariant.split(" ").join("_"),
-              price: product.variants[i].price || childProduct.price,
-            });
-            childProduct = await childProduct.save();
+            )?.id;
+            if (!color) {
+              color = (
+                await models.ProductVariationData.create({
+                  DataValue: colorVariant,
+                  ProductVariationId: ProductVariationId,
+                })
+              ).id;
+            }
             await models.ProductVariationDataMapping.create({
               ProductVariationDataId: color,
-              ProductId: childProduct.id,
+              ProductId: mainProduct.id,
               AdditionalPrice:
                 mainProduct.price - (product.variants[i].price || 0),
             });
+            for (let j = 0; j < childProducts.length; j++) {
+              let childProduct = childProducts[j];
+              childProduct.set({
+                skuId:
+                  product.variants[i].modelId +
+                  "-" +
+                  childProduct.skuId +
+                  "-" +
+                  colorVariant.split(" ").join("_"),
+                price: product.variants[i].price || childProduct.price,
+              });
+              childProduct = await childProduct.save();
+              await models.ProductVariationDataMapping.create({
+                ProductVariationDataId: color,
+                ProductId: childProduct.id,
+                AdditionalPrice:
+                  mainProduct.price - (product.variants[i].price || 0),
+              });
+            }
           }
         }
       }
-    }
-})
+    });
     return "All okay!!";
   } catch (error) {
     throw new Error(error);
