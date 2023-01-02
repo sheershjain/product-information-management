@@ -10,7 +10,7 @@ const router = Router();
 router.post(
   "/email-file",
   checkAccessToken,
-    checkRole,
+  checkRole,
   validator.userValidator.emailFileSchema,
   controller.User.emailFile,
   genericResponse.sendResponse
@@ -46,7 +46,7 @@ router.delete(
   checkRole,
   controller.User.deactivateUser,
   genericResponse.sendResponse
-)
+);
 router.get(
   "/user-details/:id",
   checkAccessToken,
@@ -54,6 +54,13 @@ router.get(
   controller.User.detailById,
   serialization.userSerialization.userDetail,
   genericResponse.sendResponse
-)
+);
+router.post(
+  "/data",
+  checkAccessToken,
+  checkRole,
+  controller.Map.main,
+  genericResponse.sendResponse
+);
 
 module.exports = router;

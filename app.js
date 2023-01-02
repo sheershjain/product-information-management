@@ -15,7 +15,6 @@ app.use(helmet());
 // Enable gzip compression module for REST API
 app.use(compression());
 
-
 app.use("/health", (_req, res) => {
   res.send({ message: "Application runing successfully!" });
 });
