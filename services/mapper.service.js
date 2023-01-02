@@ -31,15 +31,28 @@ const main = async () => {
   //   ],
   // };
   let product = await readFile("./data.json", { encoding: "utf8" });
-  product=JSON.parse(product)
+  product = JSON.parse(product);
+  await models.ProductVariationDataMapping.destroy({
+    where: {},
+    force: true,
+  });
+  await models.ProductVariationData.destroy({
+    where: {},
+    force: true,
+  });
+  await models.Media.destroy({
+    where: {},
+    force: true,
+  });
+  await models.Product.destroy({
+    where: {},
+    force: true,
+  });
   try {
-   await  product.map(async (product) => {
+    const data = await product.map(async (product) => {
       const val = await models.Product.findOne({
         where: { sku_id: product.modelId },
       });
-      if (val) {
-        throw new Error("Product already exists");
-      }
 
       let mainProduct = await models.Product.create({
         name: product.name,
@@ -47,6 +60,10 @@ const main = async () => {
         price: product.price,
       });
 
+      let mainProductImage = await models.Media.create({
+        productId: mainProduct.id,
+        photoLink: product.image,
+      });
       const childProducts = [];
 
       if (product.availableSizes.length) {
@@ -54,7 +71,11 @@ const main = async () => {
           await models.ProductVariation.findOne({
             where: { ProductVariationName: "size" },
           })
-        ).id;
+        )?.id;
+        console.log(
+          "-------------------------------------",
+          ProductVariationId
+        );
         for (let i = 0; i < product.availableSizes.length; i++) {
           const avlSize = product.availableSizes[i];
           if (avlSize) {
@@ -153,11 +174,17 @@ const main = async () => {
                   mainProduct.price - (product.variants[i].price || 0),
               });
             }
+            await models.Media.create({
+              productId: color.id,
+              photoLink: product.variants[i].image,
+            });
           }
         }
       }
     });
-    return "All okay!!";
+    if (data) {
+      return "All okay!!";
+    }
   } catch (error) {
     throw new Error(error);
   }
