@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
         isAlpha: true,
       },
       MatrixProduct: {
-        type: Sequelize.BOOLEAN,
+        type: DataTypes.BOOLEAN,
         defaultValue: false,
         allowNull: false,
       },

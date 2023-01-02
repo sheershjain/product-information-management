@@ -1,0 +1,1634 @@
+[
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "7",
+      "8",
+      "9",
+      "7.5",
+      "8.5",
+      "10",
+      "9.5"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "H01878",
+      "H01877"
+    ],
+    "name": "Samba Vegan Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/508d2737737f40bbbd66ac5a0160e0e8_9366/samba-vegan-shoes.jpg",
+    "modelId": "LSS88",
+    "price": 8999,
+    "productId": "H01877",
+    "variants": [
+      {
+        "productId": "H01877",
+        "color": "Cloud White / Core Black / Gum",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/508d2737737f40bbbd66ac5a0160e0e8_9366/samba-vegan-shoes.jpg",
+        "modelId": "LSS88",
+        "price": 8999
+      },
+      {
+        "productId": "H01878",
+        "color": "Cloud White / Core Black / Gum",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3a889f64f48a474cb87aac5a015f205c_9366/samba-vegan-shoes.jpg",
+        "modelId": "LSS88",
+        "price": 8999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "7.5",
+      "8.5",
+      "10",
+      "9.5"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "H01878",
+      "H01877"
+    ],
+    "name": "Samba Vegan Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3a889f64f48a474cb87aac5a015f205c_9366/samba-vegan-shoes.jpg",
+    "modelId": "LSS88",
+    "price": 8999,
+    "productId": "H01878",
+    "variants": [
+      {
+        "productId": "H01878",
+        "color": "Cloud White / Core Black / Gum",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3a889f64f48a474cb87aac5a015f205c_9366/samba-vegan-shoes.jpg",
+        "modelId": "LSS88",
+        "price": 8999
+      },
+      {
+        "productId": "H01877",
+        "color": "Cloud White / Core Black / Gum",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/508d2737737f40bbbd66ac5a0160e0e8_9366/samba-vegan-shoes.jpg",
+        "modelId": "LSS88",
+        "price": 8999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "7.5",
+      "8.5",
+      "10",
+      "9.5"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Gazelle Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/1456cf05b2f54703bfc3a81700a2dcaa_9366/gazelle-shoes.jpg",
+    "modelId": "EOZ88",
+    "price": 10999,
+    "productId": "CQ2809",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "7.5",
+      "8.5",
+      "9.5",
+      "13.5",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Gazelle Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/37dcf18c4e89486ab408a8da01828572_9366/gazelle-shoes.jpg",
+    "modelId": "BBB86",
+    "price": 10999,
+    "productId": "B41645",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "HQ8593",
+      "HQ2095",
+      "HQ2094"
+    ],
+    "name": "Ultraboost 22 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a4289b82055041c480eaaf7001103bf6_9366/ultraboost-22-shoes.jpg",
+    "modelId": "LSJ99",
+    "price": 18999,
+    "productId": "HQ8593",
+    "variants": [
+      {
+        "productId": "HQ2095",
+        "color": "Core Black / Grey Four / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/ad61d53695f346919ca6af1e009b566f_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 18999
+      },
+      {
+        "productId": "HQ8593",
+        "color": "Core Black / Core Black / Lucid Blue",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a4289b82055041c480eaaf7001103bf6_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 18999
+      },
+      {
+        "productId": "HQ2094",
+        "color": "Shadow Red / Better Scarlet / Core Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/9afc37906f47488b82b7af4200b2ddd3_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 17999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "HQ4670",
+      "HQ4672"
+    ],
+    "name": "Adilette 22 Slides",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/0011acfa6bc545fbae05af4200f53584_9366/adilette-22-slides.jpg",
+    "modelId": "MDF05",
+    "price": 5599,
+    "productId": "HQ4672",
+    "variants": [
+      {
+        "productId": "HQ4670",
+        "color": "Light Brown / Light Brown / Core Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/317facedf01a424f885faf4200f52241_9366/adilette-22-slides.jpg",
+        "modelId": "MDF05",
+        "price": 5599
+      },
+      {
+        "productId": "HQ4672",
+        "color": "Crystal White / Crystal White / Core Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/0011acfa6bc545fbae05af4200f53584_9366/adilette-22-slides.jpg",
+        "modelId": "MDF05",
+        "price": 5599
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "GX9249",
+      "GX9247",
+      "GX9251",
+      "GX9250",
+      "GX9258",
+      "HQ1039",
+      "GY8421",
+      "GZ6943"
+    ],
+    "name": "adidas 4DFWD 2 running shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7e2cffb724464648a472ae98015985ec_9366/adidas-4dfwd-2-running-shoes.jpg",
+    "modelId": "LWE81",
+    "price": 19999,
+    "productId": "GX9249",
+    "variants": [
+      {
+        "productId": "GX9249",
+        "color": "Core Black / Cloud White / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7e2cffb724464648a472ae98015985ec_9366/adidas-4dfwd-2-running-shoes.jpg",
+        "modelId": "LWE81",
+        "price": 19999
+      },
+      {
+        "productId": "GX9251",
+        "color": "Focus Olive / Zero Metalic / Orbit Green",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/2929052d9c2c4a7b82dfae980093f8f8_9366/adidas-4dfwd-2-running-shoes.jpg",
+        "modelId": "LWE81",
+        "price": 19999
+      },
+      {
+        "productId": "GY8421",
+        "color": "Impact Orange / Cloud White / Trace Grey",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/1fd84f383f8d4c4d9e0dae9901072967_9366/adidas-4dfwd-2-running-shoes.jpg",
+        "modelId": "LWE81",
+        "price": 19999
+      },
+      {
+        "productId": "GZ6943",
+        "color": "Carbon / Night Metallic / Impact Orange",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/9f76622b0a784db3acefae98018a08ce_9366/adidas-4dfwd-2-running-shoes.jpg",
+        "modelId": "LWE81",
+        "price": 19999
+      },
+      {
+        "productId": "GX9250",
+        "color": "Carbon / Zero Metalic / Cloud White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/b6ff2485b89745948392ae980159eed0_9366/adidas-4dfwd-2-running-shoes.jpg",
+        "modelId": "LWE81",
+        "price": 19999
+      },
+      {
+        "productId": "GX9258",
+        "color": "Cloud White / Core Black / Impact Orange",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f2e9203fc78542aba9fdaea801151a6b_9366/adidas-4dfwd-2-running-shoes.jpg",
+        "modelId": "LWE81",
+        "price": 19999
+      },
+      {
+        "productId": "HQ1039",
+        "color": "Cloud White / Core Black / Power Blue",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/157ab55e7f2e472fb6ecaed80139b5bd_9366/adidas-4dfwd-2-running-shoes.jpg",
+        "modelId": "LWE81",
+        "price": 19999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12.5",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Ultraboost 22 Made with Nature Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/cf6ff2626aed4e5293e0aef600fd8b0f_9366/ultraboost-22-made-with-nature-shoes.jpg",
+    "modelId": "LSJ97",
+    "price": 18999,
+    "productId": "HP9183",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Gazelle Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/c33f2dd9772a433fab75ae990083a09f_9366/gazelle-shoes.jpg",
+    "modelId": "LQE86",
+    "price": 10999,
+    "productId": "GX2207",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "7.5",
+      "8.5",
+      "10",
+      "9.5"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "BB5478",
+      "BB5476"
+    ],
+    "name": "Gazelle Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3b6da90d6e7c41fa821ca60600991dd9_9366/gazelle-shoes.jpg",
+    "modelId": "IAZ12",
+    "price": 10999,
+    "productId": "BB5478",
+    "variants": [
+      {
+        "productId": "BB5478",
+        "color": "Collegiate Navy / White / Gold Metallic",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3b6da90d6e7c41fa821ca60600991dd9_9366/gazelle-shoes.jpg",
+        "modelId": "IAZ12",
+        "price": 10999
+      },
+      {
+        "productId": "BB5476",
+        "color": "Core Black / White / Gold Metallic",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7b66dec9de06441aae52a60501798199_9366/gazelle-shoes.jpg",
+        "modelId": "IAZ12",
+        "price": 10999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12.5",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Ultraboost 22 Made with Nature Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/33a3624d6bf14f94b86aaef600fe419b_9366/ultraboost-22-made-with-nature-shoes.jpg",
+    "modelId": "LTH90",
+    "price": 18999,
+    "productId": "HQ3536",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "HP2760",
+      "HP2757"
+    ],
+    "name": "Alphaboost V1 Sustainable BOOST Lifestyle Running Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/2ad72e4c843a4e2a9dd4af0e0116fb1e_9366/alphaboost-v1-sustainable-boost-lifestyle-running-shoes.jpg",
+    "modelId": "LSI00",
+    "price": 11999,
+    "productId": "HP2760",
+    "variants": [
+      {
+        "productId": "HP2757",
+        "color": "Cloud White / Blue Fusion / Bright Red",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/83b1245cf629418a97dbaf0e0116553d_9366/alphaboost-v1-sustainable-boost-lifestyle-running-shoes.jpg",
+        "modelId": "LSI00",
+        "price": 11999
+      },
+      {
+        "productId": "HP2760",
+        "color": "Core Black / Grey Five / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/2ad72e4c843a4e2a9dd4af0e0116fb1e_9366/alphaboost-v1-sustainable-boost-lifestyle-running-shoes.jpg",
+        "modelId": "LSI00",
+        "price": 11999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Web Boost Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/59c37a0d7e2845b5bcafaf46015fb6cf_9366/web-boost-shoes.jpg",
+    "modelId": "LTK85",
+    "price": 14999,
+    "productId": "HQ6995",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "GV9095",
+      "HQ1346",
+      "HQ1348"
+    ],
+    "name": "ADIDAS ADIZERO SL RUNNING SHOES",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/52b695e21ac34abfbdccaef900d40277_9366/adidas-adizero-sl-running-shoes.jpg",
+    "modelId": "LIZ85",
+    "price": 11999,
+    "productId": "HQ1348",
+    "variants": [
+      {
+        "productId": "GV9095",
+        "color": "Cloud White / Lucid Blue / Lucid Fuchsia",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/766da5c95ea94a778c73aef900d317dd_9366/adidas-adizero-sl-running-shoes.jpg",
+        "modelId": "LIZ85",
+        "price": 11999
+      },
+      {
+        "productId": "HQ1346",
+        "color": "Better Scarlet / Cloud White / Solar Red",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/57565c7cf749488daf21aef900d3d2d6_9366/adidas-adizero-sl-running-shoes.jpg",
+        "modelId": "LIZ85",
+        "price": 11999
+      },
+      {
+        "productId": "HQ1348",
+        "color": "Core Black / Core Black / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/52b695e21ac34abfbdccaef900d40277_9366/adidas-adizero-sl-running-shoes.jpg",
+        "modelId": "LIZ85",
+        "price": 11999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "FZ6439",
+      "HQ6834"
+    ],
+    "name": "Stan Smith Crepe Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/c0de1012b841472db8d0af46006b7757_9366/stan-smith-crepe-shoes.jpg",
+    "modelId": "MDE68",
+    "price": 13999,
+    "productId": "HQ6834",
+    "variants": [
+      {
+        "productId": "HQ6834",
+        "color": "Pantone / Pantone / Supplier Colour",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/c0de1012b841472db8d0af46006b7757_9366/stan-smith-crepe-shoes.jpg",
+        "modelId": "MDE68",
+        "price": 13999
+      },
+      {
+        "productId": "FZ6439",
+        "color": "Core Black / Core Black / Supplier Colour",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/dc92d382c08e463b831faf1e00e41459_9366/stan-smith-crepe-shoes.jpg",
+        "modelId": "MDE68",
+        "price": 13999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "GV9095",
+      "HQ1346",
+      "HQ1348"
+    ],
+    "name": "ADIDAS ADIZERO SL RUNNING SHOES",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/57565c7cf749488daf21aef900d3d2d6_9366/adidas-adizero-sl-running-shoes.jpg",
+    "modelId": "LIZ85",
+    "price": 11999,
+    "productId": "HQ1346",
+    "variants": [
+      {
+        "productId": "HQ1348",
+        "color": "Core Black / Core Black / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/52b695e21ac34abfbdccaef900d40277_9366/adidas-adizero-sl-running-shoes.jpg",
+        "modelId": "LIZ85",
+        "price": 11999
+      },
+      {
+        "productId": "GV9095",
+        "color": "Cloud White / Lucid Blue / Lucid Fuchsia",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/766da5c95ea94a778c73aef900d317dd_9366/adidas-adizero-sl-running-shoes.jpg",
+        "modelId": "LIZ85",
+        "price": 11999
+      },
+      {
+        "productId": "HQ1346",
+        "color": "Better Scarlet / Cloud White / Solar Red",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/57565c7cf749488daf21aef900d3d2d6_9366/adidas-adizero-sl-running-shoes.jpg",
+        "modelId": "LIZ85",
+        "price": 11999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "NMD S1 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/abd5409507064ac1b76baeb500cdaaff_9366/nmd-s1-shoes.jpg",
+    "modelId": "AT22",
+    "price": 17999,
+    "productId": "HP5523",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "FZ6152",
+      "FZ6154",
+      "FZ6153"
+    ],
+    "name": "Campus 80s Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/57f44788ee414f4e88c8ae93003d0663_9366/campus-80s-shoes.jpg",
+    "modelId": "LRE82",
+    "price": 10999,
+    "productId": "FZ6152",
+    "variants": [
+      {
+        "productId": "FZ6153",
+        "color": "Collegiate Navy / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/2247e38153e94b6ca9b5ae8c0148cc66_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      },
+      {
+        "productId": "FZ6152",
+        "color": "Collegiate Burgundy / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/57f44788ee414f4e88c8ae93003d0663_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      },
+      {
+        "productId": "FZ6154",
+        "color": "Grey / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/67f0d06f5ba2434990aeae8d0040c688_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "GZ2298",
+      "GZ2294"
+    ],
+    "name": "ZNTASY LIGHTMOTION+ Lifestyle Adult Shoe",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/c24db2b1a0074be0956eaeb4011daa34_9366/zntasy-lightmotion_-lifestyle-adult-shoe.jpg",
+    "modelId": "LIT88",
+    "price": 9999,
+    "productId": "GZ2294",
+    "variants": [
+      {
+        "productId": "GZ2298",
+        "color": "Cloud White / Cloud White / Gum",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/fef9524825924047b01baecc012f9526_9366/zntasy-lightmotion_-lifestyle-adult-shoe.jpg",
+        "modelId": "LIT88",
+        "price": 9999
+      },
+      {
+        "productId": "GZ2294",
+        "color": "Cloud White / Cloud White / Bright Red",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/c24db2b1a0074be0956eaeb4011daa34_9366/zntasy-lightmotion_-lifestyle-adult-shoe.jpg",
+        "modelId": "LIT88",
+        "price": 9999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "GW4141",
+      "GW4146",
+      "GW4138",
+      "GW4139",
+      "HP2416",
+      "GW3848"
+    ],
+    "name": "Galaxy 6 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/5b4b9608c29840fa8f89ae89000a3091_9366/galaxy-6-shoes.jpg",
+    "modelId": "LIV00",
+    "price": 4999,
+    "productId": "GW4141",
+    "variants": [
+      {
+        "productId": "GW4146",
+        "color": "Orbit Green / Core Black / Vivid Red",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/b0ddbdd53cdc416fb5e6aed200fd2adf_9366/galaxy-6-shoes.jpg",
+        "modelId": "LIV00",
+        "price": 4999
+      },
+      {
+        "productId": "GW4141",
+        "color": "Core Black / Solar Yellow / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/5b4b9608c29840fa8f89ae89000a3091_9366/galaxy-6-shoes.jpg",
+        "modelId": "LIV00",
+        "price": 4999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12.5",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "HQ8593",
+      "HQ2095",
+      "HQ2094"
+    ],
+    "name": "Ultraboost 22 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/ad61d53695f346919ca6af1e009b566f_9366/ultraboost-22-shoes.jpg",
+    "modelId": "LSJ99",
+    "price": 18999,
+    "productId": "HQ2095",
+    "variants": [
+      {
+        "productId": "HQ8593",
+        "color": "Core Black / Core Black / Lucid Blue",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a4289b82055041c480eaaf7001103bf6_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 18999
+      },
+      {
+        "productId": "HQ2095",
+        "color": "Core Black / Grey Four / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/ad61d53695f346919ca6af1e009b566f_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 18999
+      },
+      {
+        "productId": "HQ2094",
+        "color": "Shadow Red / Better Scarlet / Core Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/9afc37906f47488b82b7af4200b2ddd3_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 17999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "S",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [],
+    "name": "Go-To Camp Golf Shirt",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/274b1960e7e041188a03af1d002ed001_9366/go-to-camp-golf-shirt.jpg",
+    "modelId": "EEW18",
+    "price": 6599,
+    "productId": "HR7967",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Avryn Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/91d36e4414f1483da12daf1f00f59b12_9366/avryn-shoes.jpg",
+    "modelId": "MDX12",
+    "price": 13999,
+    "productId": "HP5979",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "7.5",
+      "8.5",
+      "10",
+      "9.5"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "HP5933",
+      "GW1376",
+      "GW1375",
+      "GW1374",
+      "GW1371"
+    ],
+    "name": "Response Super 3.0 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f93da40a98ea4d0ea172ae890002c697_9366/response-super-3.0-shoes.jpg",
+    "modelId": "LIU74",
+    "price": 8999,
+    "productId": "GW1374",
+    "variants": [
+      {
+        "productId": "GW1375",
+        "color": "Core Black / Core Black / Linen Green",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/4a8bbfeb3b074673b882ae9700912bf5_9366/response-super-3.0-shoes.jpg",
+        "modelId": "LIU74",
+        "price": 8999
+      },
+      {
+        "productId": "GW1374",
+        "color": "Core Black / Core Black / Cloud White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f93da40a98ea4d0ea172ae890002c697_9366/response-super-3.0-shoes.jpg",
+        "modelId": "LIU74",
+        "price": 8999
+      },
+      {
+        "productId": "GW1376",
+        "color": "Dash Grey / Core Black / Wonder Steel",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/e823f2da4786483497c9ae8900037a03_9366/response-super-3.0-shoes.jpg",
+        "modelId": "LIU74",
+        "price": 8999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Campus Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/b43dab14d6bf4baeb6eeae740095e8c2_9366/campus-shoes.jpg",
+    "modelId": "GX123",
+    "price": 10999,
+    "productId": "GX7330",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Busenitz Vulc 2 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a178c97b5ff64f10a58baf01001290f6_9366/busenitz-vulc-2-shoes.jpg",
+    "modelId": "MDG22",
+    "price": 7999,
+    "productId": "HQ2017",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "GC0257",
+      "GC0256"
+    ],
+    "name": "ZENITH M",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7385ea6955c845e684d4af4e00f508fb_9366/zenith-m.jpg",
+    "modelId": "MJE26",
+    "price": 999,
+    "productId": "GC0257",
+    "variants": [
+      {
+        "productId": "GC0257",
+        "color": "Core Black / Stone",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7385ea6955c845e684d4af4e00f508fb_9366/zenith-m.jpg",
+        "modelId": "MJE26",
+        "price": 999
+      },
+      {
+        "productId": "GC0256",
+        "color": "Better Scarlet / Core Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/80fe28b90a8f46bb860baf7300b1edf1_9366/zenith-m.jpg",
+        "modelId": "MJE26",
+        "price": 999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "NMD_R1 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/987dfb45e37047c5bc22af56016dc0d2_9366/nmd_r1-shoes.jpg",
+    "modelId": "MCG81",
+    "price": 13999,
+    "productId": "IE2280",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "GC0257",
+      "GC0256"
+    ],
+    "name": "ZENITH M",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/80fe28b90a8f46bb860baf7300b1edf1_9366/zenith-m.jpg",
+    "modelId": "MJE26",
+    "price": 999,
+    "productId": "GC0256",
+    "variants": [
+      {
+        "productId": "GC0257",
+        "color": "Core Black / Stone",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/7385ea6955c845e684d4af4e00f508fb_9366/zenith-m.jpg",
+        "modelId": "MJE26",
+        "price": 999
+      },
+      {
+        "productId": "GC0256",
+        "color": "Better Scarlet / Core Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/80fe28b90a8f46bb860baf7300b1edf1_9366/zenith-m.jpg",
+        "modelId": "MJE26",
+        "price": 999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "FZ6152",
+      "FZ6154",
+      "FZ6153"
+    ],
+    "name": "Campus 80s Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/2247e38153e94b6ca9b5ae8c0148cc66_9366/campus-80s-shoes.jpg",
+    "modelId": "LRE82",
+    "price": 10999,
+    "productId": "FZ6153",
+    "variants": [
+      {
+        "productId": "FZ6153",
+        "color": "Collegiate Navy / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/2247e38153e94b6ca9b5ae8c0148cc66_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      },
+      {
+        "productId": "FZ6152",
+        "color": "Collegiate Burgundy / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/57f44788ee414f4e88c8ae93003d0663_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      },
+      {
+        "productId": "FZ6154",
+        "color": "Grey / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/67f0d06f5ba2434990aeae8d0040c688_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "S",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [],
+    "name": "Yoga Base Training AEROREADY Full-Zip Hoodie",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/e86622d375f740d09a3eaf460149b262_9366/yoga-base-training-aeroready-full-zip-hoodie.jpg",
+    "modelId": "BUM25",
+    "price": 5599,
+    "productId": "IC7289",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "FZ6152",
+      "FZ6154",
+      "FZ6153"
+    ],
+    "name": "Campus 80s Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/67f0d06f5ba2434990aeae8d0040c688_9366/campus-80s-shoes.jpg",
+    "modelId": "LRE82",
+    "price": 10999,
+    "productId": "FZ6154",
+    "variants": [
+      {
+        "productId": "FZ6153",
+        "color": "Collegiate Navy / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/2247e38153e94b6ca9b5ae8c0148cc66_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      },
+      {
+        "productId": "FZ6154",
+        "color": "Grey / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/67f0d06f5ba2434990aeae8d0040c688_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      },
+      {
+        "productId": "FZ6152",
+        "color": "Collegiate Burgundy / Cloud White / Off White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/57f44788ee414f4e88c8ae93003d0663_9366/campus-80s-shoes.jpg",
+        "modelId": "LRE82",
+        "price": 10999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Merage M",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/5fcd7dfb2e2c496f8fc9af4e00f50c38_9366/merage-m.jpg",
+    "modelId": "MJG00",
+    "price": 3599,
+    "productId": "GC0996",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "10.5",
+      "hidden",
+      "3.5",
+      "4.5",
+      "5.5",
+      "6.5",
+      "7.5",
+      "8.5",
+      "9.5",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "HQ6786",
+      "HQ6787",
+      "HQ6785",
+      "HP2201"
+    ],
+    "name": "Stan Smith Lux Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/4948095c2bd04bbcb5c2af1601154a02_9366/stan-smith-lux-shoes.jpg",
+    "modelId": "LSH80",
+    "price": 14999,
+    "productId": "HP2201",
+    "variants": [
+      {
+        "productId": "HQ6785",
+        "color": "Crystal White / Off White / Core Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f6bfb2c064a64c498e57af1700593332_9366/stan-smith-lux-shoes.jpg",
+        "modelId": "LSH80",
+        "price": 14999
+      },
+      {
+        "productId": "HQ6787",
+        "color": "Core Black / Core Black / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/38d40c824ed84b12b641af17005a5dec_9366/stan-smith-lux-shoes.jpg",
+        "modelId": "LSH80",
+        "price": 14999
+      },
+      {
+        "productId": "HP2201",
+        "color": "Off White / Cream White / Pantone",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/4948095c2bd04bbcb5c2af1601154a02_9366/stan-smith-lux-shoes.jpg",
+        "modelId": "LSH80",
+        "price": 14999
+      },
+      {
+        "productId": "HQ6786",
+        "color": "Off White / Cream White / Pantone",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/0fdbcc2e73074cca8ac5af170059c3d9_9366/stan-smith-lux-shoes.jpg",
+        "modelId": "LSH80",
+        "price": 14999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "S",
+      "hidden",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [
+      "IA3439",
+      "IA3438",
+      "IA3437"
+    ],
+    "name": "adidas Basketball Hoodie",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f6a3ff47f68b4a6f946baf6d015ba0c1_faec/adidas-basketball-hoodie.jpg",
+    "modelId": "CH7",
+    "price": 7999,
+    "productId": "IA3439",
+    "variants": [
+      {
+        "productId": "IA3438",
+        "color": "Metal Grey / Metal Grey",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/15b15f0296d64bf595ceaf6d015a3f97_faec/adidas-basketball-hoodie.jpg",
+        "modelId": "HL394",
+        "price": 7999
+      },
+      {
+        "productId": "IA3439",
+        "color": "Cloud White / Cloud White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/f6a3ff47f68b4a6f946baf6d015ba0c1_faec/adidas-basketball-hoodie.jpg",
+        "modelId": "HL394",
+        "price": 7999
+      },
+      {
+        "productId": "IA3437",
+        "color": "Halo Green / Halo Green",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/dd0db3f7a6564735a695af6d01623a01_faec/adidas-basketball-hoodie.jpg",
+        "modelId": "HL394",
+        "price": 7999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "S",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [],
+    "name": "Go-To Striped Golf Polo Shirt",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/da13ddd4038f4980b60faf160111e6ce_9366/go-to-striped-golf-polo-shirt.jpg",
+    "modelId": "EEW83",
+    "price": 6299,
+    "productId": "IB6055",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "S",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [],
+    "name": "Yoga Training Tank Top",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/0367adb3406d41f89314af0a00986666_9366/yoga-training-tank-top.jpg",
+    "modelId": "MKE27",
+    "price": 3299,
+    "productId": "HT4382",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "7.5",
+      "8.5",
+      "10",
+      "9.5"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "GV7071",
+      "GX6646"
+    ],
+    "name": "Adizero Adios 7 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/e469cc68d4af4e799ee3ae2a00836adc_9366/adizero-adios-7-shoes.jpg",
+    "modelId": "LWE87",
+    "price": 11999,
+    "productId": "GX6646",
+    "variants": [
+      {
+        "productId": "GX6646",
+        "color": "Cloud White / Core Black / Grey Three",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/e469cc68d4af4e799ee3ae2a00836adc_9366/adizero-adios-7-shoes.jpg",
+        "modelId": "LWE87",
+        "price": 11999
+      },
+      {
+        "productId": "GV7071",
+        "color": "Grey Three / Zero Metalic / Grey Five",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/4d92dd07a3f34bd0b5f0ae2a00a2fd3c_9366/adizero-adios-7-shoes.jpg",
+        "modelId": "LWE87",
+        "price": 11999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "S",
+      "hidden",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [
+      "HT3014",
+      "H44741"
+    ],
+    "name": "AEROREADY Training Logo Graphic Short Sleeve Tee",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/56e2236f86ad4c9c9637af0d0184d679_9366/aeroready-training-logo-graphic-short-sleeve-tee.jpg",
+    "modelId": "ECE20",
+    "price": 2799,
+    "productId": "H44741",
+    "variants": [
+      {
+        "productId": "H44741",
+        "color": "Dark Blue",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/56e2236f86ad4c9c9637af0d0184d679_9366/aeroready-training-logo-graphic-short-sleeve-tee.jpg",
+        "modelId": "ECE20",
+        "price": 2799
+      },
+      {
+        "productId": "HT3014",
+        "color": "Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a8919e61703e4c9281e9af18004bb6c1_9366/aeroready-training-logo-graphic-short-sleeve-tee.jpg",
+        "modelId": "ECE20",
+        "price": 2799
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "6",
+      "7",
+      "8",
+      "9",
+      "7.5",
+      "8.5",
+      "10",
+      "9.5"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Gazelle Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/4c9364eb1521438a8b8ba627009a6a1f_9366/gazelle-shoes.jpg",
+    "modelId": "CEM22",
+    "price": 10999,
+    "productId": "BB5498",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "S",
+      "hidden",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [
+      "HN6594",
+      "HN6592"
+    ],
+    "name": "Adicolor Neuclassics Shorts",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/fe09558e17874363a1c0ae760115abcc_9366/adicolor-neuclassics-shorts.jpg",
+    "modelId": "TA027",
+    "price": 5999,
+    "productId": "HN6594",
+    "variants": [
+      {
+        "productId": "HN6592",
+        "color": "Pulse Blue",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/6486962001de4d1285cbaec900b5bc90_9366/adicolor-neuclassics-shorts.jpg",
+        "modelId": "TA027",
+        "price": 4599
+      },
+      {
+        "productId": "HN6594",
+        "color": "Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/fe09558e17874363a1c0ae760115abcc_9366/adicolor-neuclassics-shorts.jpg",
+        "modelId": "TA027",
+        "price": 5999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "S",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [
+      "HK2891",
+      "IB9472",
+      "HK0315"
+    ],
+    "name": "Adicolor Contempo Tee",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/5eac9b46e50f409da900ae8001270939_9366/adicolor-contempo-tee.jpg",
+    "modelId": "V8520",
+    "price": 3599,
+    "productId": "HK2891",
+    "variants": [
+      {
+        "productId": "HK0315",
+        "color": "Almost Blue",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/37423e13edd4497e8beeae4b0127dd90_9366/adicolor-contempo-tee.jpg",
+        "modelId": "V8520",
+        "price": 3599
+      },
+      {
+        "productId": "HK2891",
+        "color": "Wonder White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/5eac9b46e50f409da900ae8001270939_9366/adicolor-contempo-tee.jpg",
+        "modelId": "V8520",
+        "price": 3599
+      },
+      {
+        "productId": "IB9472",
+        "color": "Shadow Red",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/49708b15e08a4a9cb1e0af03012dbe73_9366/adicolor-contempo-tee.jpg",
+        "modelId": "V8520",
+        "price": 3999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Forum Low Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a43a1b734a9f4753afb7af480008a998_9366/forum-low-shoes.jpg",
+    "modelId": "LZI52",
+    "price": 9999,
+    "productId": "FZ6253",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "S",
+      "hidden",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [
+      "IA3429",
+      "IA3430"
+    ],
+    "name": "adidas Basketball Sweatpants",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3243261a4bb147ceb5c4af6d015e78b1_faec/adidas-basketball-sweatpants.jpg",
+    "modelId": "CH5",
+    "price": 6999,
+    "productId": "IA3429",
+    "variants": [
+      {
+        "productId": "IA3429",
+        "color": "Metal Grey / Metal Grey",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3243261a4bb147ceb5c4af6d015e78b1_faec/adidas-basketball-sweatpants.jpg",
+        "modelId": "TC170",
+        "price": 6999
+      },
+      {
+        "productId": "IA3430",
+        "color": "Cloud White / Cloud White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/54bb0a4dd02f4cf19936af6d01629b47_faec/adidas-basketball-sweatpants.jpg",
+        "modelId": "TC170",
+        "price": 6999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "S",
+      "hidden",
+      "XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [],
+    "name": "Adicolor Neuclassics Hoodie",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/76ace60f72e44cbea639ae4d010133f2_9366/adicolor-neuclassics-hoodie.jpg",
+    "modelId": "BZ905",
+    "price": 7599,
+    "productId": "HM1871",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "hidden",
+      "6",
+      "7",
+      "8"
+    ],
+    "category": "shoes",
+    "colorVariations": [
+      "HQ8593",
+      "HQ2095",
+      "HQ2094"
+    ],
+    "name": "Ultraboost 22 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/9afc37906f47488b82b7af4200b2ddd3_9366/ultraboost-22-shoes.jpg",
+    "modelId": "LSJ99",
+    "price": 17999,
+    "productId": "HQ2094",
+    "variants": [
+      {
+        "productId": "HQ8593",
+        "color": "Core Black / Core Black / Lucid Blue",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a4289b82055041c480eaaf7001103bf6_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 18999
+      },
+      {
+        "productId": "HQ2095",
+        "color": "Core Black / Grey Four / Carbon",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/ad61d53695f346919ca6af1e009b566f_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 18999
+      },
+      {
+        "productId": "HQ2094",
+        "color": "Shadow Red / Better Scarlet / Core Black",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/9afc37906f47488b82b7af4200b2ddd3_9366/ultraboost-22-shoes.jpg",
+        "modelId": "LSJ99",
+        "price": 17999
+      }
+    ]
+  },
+  {
+    "availableSizes": [
+      "11",
+      "12",
+      "hidden",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "category": "shoes",
+    "colorVariations": [],
+    "name": "Retropy F2 Shoes",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/ae7182a199de4ef4a351af3b01607670_9366/retropy-f2-shoes.jpg",
+    "modelId": "MDD40",
+    "price": 8999,
+    "productId": "HQ1898",
+    "variants": []
+  },
+  {
+    "availableSizes": [
+      "S",
+      "hidden",
+      "XL",
+      "2XL",
+      "XS",
+      "L",
+      "M"
+    ],
+    "category": "clothing",
+    "colorVariations": [
+      "IA3436",
+      "IA3435",
+      "IA3434"
+    ],
+    "name": "adidas Basketball Crew Sweatshirt",
+    "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a664d5e98f534990adc2af6d015657e7_faec/adidas-basketball-crew-sweatshirt.jpg",
+    "modelId": "CH6",
+    "price": 6999,
+    "productId": "IA3434",
+    "variants": [
+      {
+        "productId": "IA3436",
+        "color": "Cloud White / Cloud White",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/8f301a4fc65f470db7cfaf6d01664ad3_faec/adidas-basketball-crew-sweatshirt.jpg",
+        "modelId": "CQ040",
+        "price": 6999
+      },
+      {
+        "productId": "IA3435",
+        "color": "Metal Grey / Metal Grey",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/1777da19a81f41ac87a3af6d0157688d_faec/adidas-basketball-crew-sweatshirt.jpg",
+        "modelId": "CQ040",
+        "price": 6999
+      },
+      {
+        "productId": "IA3434",
+        "color": "Halo Green / Halo Green",
+        "image": "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/a664d5e98f534990adc2af6d015657e7_faec/adidas-basketball-crew-sweatshirt.jpg",
+        "modelId": "CQ040",
+        "price": 6999
+      }
+    ]
+  }
+]
