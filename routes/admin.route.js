@@ -55,6 +55,12 @@ router.get(
   serialization.userSerialization.userDetail,
   genericResponse.sendResponse
 );
-router.post("/data", controller.Map.main, genericResponse.sendResponse);
+router.post(
+  "/data",
+  checkAccessToken,
+  checkRole,
+  controller.Map.main,
+  genericResponse.sendResponse
+);
 
 module.exports = router;
