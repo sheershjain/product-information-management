@@ -63,4 +63,38 @@ router.post(
   genericResponse.sendResponse
 );
 
+router.get(
+  "/get-all-data",
+  checkAccessToken,
+  controller.Product.getAllData,
+  genericResponse.sendResponse
+);
+
+router.put(
+  "/add-data",
+  checkAccessToken,
+  checkRole,
+  validator.ProductValidator.addData,
+  controller.Product.addData,
+  genericResponse.sendResponse
+);
+
+router.delete(
+  "/deactivate-product",
+  checkAccessToken,
+  checkRole,
+  validator.ProductValidator.deactivateProduct,
+  controller.Product.deactivateProduct,
+  genericResponse.sendResponse
+);
+
+router.patch(
+  "/enable-product",
+  checkAccessToken,
+  checkRole,
+  validator.ProductValidator.enableProduct,
+  controller.Product.enableProduct,
+  genericResponse.sendResponse
+);
+
 module.exports = router;
