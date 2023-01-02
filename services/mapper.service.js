@@ -72,16 +72,12 @@ const main = async () => {
             where: { ProductVariationName: "size" },
           })
         )?.id;
-        console.log(
-          "-------------------------------------",
-          ProductVariationId
-        );
         for (let i = 0; i < product.availableSizes.length; i++) {
           const avlSize = product.availableSizes[i];
           if (avlSize) {
-            if (!mainProduct.matrixProduct) {
+            if (!mainProduct.MatrixProduct) {
               mainProduct.set({
-                matrixProduct: true,
+                MatrixProduct: true,
               });
               mainProduct = await mainProduct.save();
             }
@@ -112,7 +108,7 @@ const main = async () => {
               skuId: avlSize,
               price: product.price,
               modelId: mainProduct.id,
-              matrixProduct: true,
+              MatrixProduct: true,
             });
             await models.ProductVariationDataMapping.create({
               ProductVariationDataId: size,
