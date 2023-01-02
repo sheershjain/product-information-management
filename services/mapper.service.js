@@ -1,37 +1,39 @@
 const models = require("../models");
+const {readFile}= require("fs/promises")
 const main = async () => {
-  const product = {
-    availableSizes: ["11", "12", "7", "8", "9", "7.5", "8.5", "10", "9.5"],
-    category: "shoes",
-    colorVariations: ["H01878", "H01877"],
-    name: "Samba Vegan Shoes",
-    image:
-      "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/508d2737737f40bbbd66ac5a0160e0e8_9366/samba-vegan-shoes.jpg",
-    modelId: "LSS88",
-    price: 8999,
-    productId: "H01877",
-    variants: [
-      {
-        productId: "H01877",
-        color: "Cloud White / Core Black / Gum",
-        image:
-          "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/508d2737737f40bbbd66ac5a0160e0e8_9366/samba-vegan-shoes.jpg",
-        modelId: "LSS88",
-        price: 8999,
-      },
-      {
-        productId: "H01878",
-        color: "Cloud White / Core Black / Gum",
-        image:
-          "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3a889f64f48a474cb87aac5a015f205c_9366/samba-vegan-shoes.jpg",
-        modelId: "LSS88",
-        price: 8999,
-      },
-    ],
-  };
-
+  // const product = {
+  //   availableSizes: ["11", "12", "7", "8", "9", "7.5", "8.5", "10", "9.5"],
+  //   category: "shoes",
+  //   colorVariations: ["H01878", "H01877"],
+  //   name: "Samba Vegan Shoes",
+  //   image:
+  //     "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/508d2737737f40bbbd66ac5a0160e0e8_9366/samba-vegan-shoes.jpg",
+  //   modelId: "LSS88",
+  //   price: 8999,
+  //   productId: "H01877",
+  //   variants: [
+  //     {
+  //       productId: "H01877",
+  //       color: "Cloud White / Core Black / Gum",
+  //       image:
+  //         "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/508d2737737f40bbbd66ac5a0160e0e8_9366/samba-vegan-shoes.jpg",
+  //       modelId: "LSS88",
+  //       price: 8999,
+  //     },
+  //     {
+  //       productId: "H01878",
+  //       color: "Cloud White / Core Black / Gum",
+  //       image:
+  //         "https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/3a889f64f48a474cb87aac5a015f205c_9366/samba-vegan-shoes.jpg",
+  //       modelId: "LSS88",
+  //       price: 8999,
+  //     },
+  //   ],
+  // };
+ const product= readFile("../data.json")
   try {
-    const val = await models.Product.findOne({
+    product.map(async(product) => {
+      const val = await models.Product.findOne({
       where: { sku_id: product.modelId },
     });
     if (val) {
@@ -153,7 +155,7 @@ const main = async () => {
         }
       }
     }
-
+})
     return "All okay!!";
   } catch (error) {
     throw new Error(error);
