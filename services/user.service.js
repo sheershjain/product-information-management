@@ -173,10 +173,9 @@ const getData = async () => {
 };
 
 const deactivateUser = async (payload) => {
-  const { userId } = payload;
   const user = await models.User.findOne({
     where: {
-      id: userId,
+      id: payload.id,
     },
   });
   if (!user) {
@@ -189,7 +188,7 @@ const deactivateUser = async (payload) => {
 
   await models.User.destroy({
     where: {
-      id: userId,
+      id: payload.id,
     },
   });
 

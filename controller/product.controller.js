@@ -2,12 +2,11 @@ const productService = require("../services/product.service");
 const { commonErrorHandler } = require("../helper/error-handler.helper");
 const getAllData = async (req, res, next) => {
   try {
-    const { query } = req;
+    const  query  = req.query;
     const data = await productService.getAllData(query);
     res.data = data;
     next();
   } catch (error) {
-    console.log(error);
     commonErrorHandler(req, res, error.message, 400, error);
   }
 };

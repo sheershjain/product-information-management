@@ -41,9 +41,10 @@ router.post(
 );
 
 router.delete(
-  "deactivate-user",
+  "/deactivate-user",
   checkAccessToken,
   checkRole,
+  validator.userValidator.deactivateUserSchema,
   controller.User.deactivateUser,
   genericResponse.sendResponse
 );

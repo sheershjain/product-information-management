@@ -50,9 +50,11 @@ const mailParse = async (req, res, next) => {
   try {
     const { params: payload } = req;
     const data = await userService.mailParse(payload);
+    console.log(data);
     res.data = data;
     next();
   } catch (error) {
+    console.log(error);
     commonErrorHandler(req, res, error.message, 400, error);
   }
 };

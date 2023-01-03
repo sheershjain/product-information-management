@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -13,12 +13,11 @@ module.exports = {
         type: Sequelize.UUID,
         references: {
           model: "product_variation",
-          key:'id'
-
+          key: "id",
         },
       },
       data_value: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(2048),
       },
       created_at: {
         allowNull: false,
@@ -38,6 +37,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('product_variation_data');
-  }
+    await queryInterface.dropTable("product_variation_data");
+  },
 };
