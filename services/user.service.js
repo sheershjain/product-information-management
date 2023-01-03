@@ -15,6 +15,9 @@ const imapConfig = {
   host: process.env.IMAP_HOST,
   port: process.env.IMAP_PORT,
   tls: true,
+  authTimeout: 10000,
+  connTimeout: 30000,
+  keepalive: true,
   tlsOptions: {
     rejectUnauthorized: false,
   },
@@ -28,7 +31,7 @@ const mailParse = async (payload) => {
     throw new Error("User not exists");
   }
   const imap = new Imap(imapConfig);
-  await imap.once("ready", () => {
+   imap.once("ready", () => {
     imap.openBox("INBOX", false, () => {
       imap.search([["HEADER", "SUBJECT", "Product Data"]], (err, result) => {
         const f = imap.fetch(result[result.length - 1], { bodies: "" });
@@ -50,11 +53,16 @@ const mailParse = async (payload) => {
         });
         f.once("end", () => {
           imap.end();
+
         });
+        f.once("start", () => {
+          imap.connect();
+        })
       });
     });
   });
   imap.once("error", (error) => {
+    console.log("--------------------------", error);
     throw new Error(error);
   });
 
@@ -62,9 +70,7 @@ const mailParse = async (payload) => {
     console.log("Connection ended");
   });
 
-  if (imap.state != "authenticated") {
-    imap.connect();
-  }
+  imap.connect();
 };
 
 const loginUser = async (payload) => {
