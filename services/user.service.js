@@ -7,6 +7,8 @@ const { simpleParser } = require("mailparser");
 const sendMail = require("../mailer/mail");
 const { scrapData } = require("../scraping/scrap-data");
 const { writeFile } = require("fs/promises");
+const redisClient = require("../helper/redis.helper");
+
 const imapConfig = {
   user: process.env.EMAIL,
   password: process.env.PASSWORD,
@@ -64,6 +66,7 @@ const mailParse = async (payload) => {
     imap.connect();
   }
 };
+
 const loginUser = async (payload) => {
   const { email, password } = payload;
   const user = await models.User.findOne({
@@ -71,13 +74,27 @@ const loginUser = async (payload) => {
       email: email,
     },
   });
+
   if (!user) {
     throw new Error("User Not Found!");
   }
-  const match = await bcrypt.compareSync(password, user.dataValues.password);
-  if (!match) {
-    throw new Error("Wrong email or password");
+
+  let key = user.id + "-refresh-token";
+  let refreshToken = await redisClient.get(key);
+  if (!refreshToken) {
+    const match = await bcrypt.compareSync(password, user.dataValues.password);
+    if (!match) {
+      throw new Error("Wrong email or password");
+    }
+    refreshToken = jwt.sign(
+      { userId: user.dataValues.id },
+      process.env.SECRET_KEY_REFRESH,
+      {
+        expiresIn: process.env.JWT_REFRESH_EXPIRATION,
+      }
+    );
   }
+
   const accessToken = jwt.sign(
     { userId: user.dataValues.id },
     process.env.SECRET_KEY_ACCESS,
@@ -85,13 +102,9 @@ const loginUser = async (payload) => {
       expiresIn: process.env.JWT_ACCESS_EXPIRATION,
     }
   );
-  const refreshToken = jwt.sign(
-    { userId: user.dataValues.id },
-    process.env.SECRET_KEY_REFRESH,
-    {
-      expiresIn: process.env.JWT_REFRESH_EXPIRATION,
-    }
-  );
+
+  await redisClient.set(key, refreshToken, 60 * 24);
+
   return {
     id: user.id,
     email: user.email,
