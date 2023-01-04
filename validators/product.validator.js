@@ -24,8 +24,16 @@ const enableProduct = (req, res, next) => {
   validateRequest(req, res, next, schema, "body");
 };
 
+const getAllData = (req, res, next) => {
+  const schema = Joi.object({
+    page: Joi.number().positive().allow(0).required(),
+  });
+  validateRequest(req, res, next, schema, "query");
+};
+
 module.exports = {
   addData,
   deactivateProduct,
   enableProduct,
+  getAllData,
 };
