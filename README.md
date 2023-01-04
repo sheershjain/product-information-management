@@ -6,7 +6,6 @@ PIM is an eCommerce business needing to collect, manage, enrich, and distribute 
 
 ![Supbase Schema](https://user-images.githubusercontent.com/114575157/210393190-b626c025-50a5-4476-83dc-b778d92b3cc3.png)
 
-
 ## Requirements
 
 For development, you will only need Node.js and a node global package, npm, installed in your environement.
@@ -34,8 +33,7 @@ If the installation was successful, you should be able to run the following comm
     v18.11.0
 
     $ npm --version
-
-8.19.2
+    8.19.2
 
 If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
 
@@ -96,6 +94,6 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     --- Server started on 3004 ---
 
 ## API Documentation
--
-    For further details about each feature you can refere to Api docs 
-    [here](https://documenter.getpostman.com/view/23688373/2s8Z72UrN9
+
+- For further details about each feature you can refere to Api docs
+  [here](https://documenter.getpostman.com/view/23688373/2s8Z72UrN9
