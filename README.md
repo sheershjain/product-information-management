@@ -93,3 +93,7 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     ... Redis db ✔
     --- Server started on 3004 ---
 
+## API Documentation
+-
+    For further details about each feature you can refere to Api docs 
+    [here](https://documenter.getpostman.com/view/23688373/2s8Z72UrN9

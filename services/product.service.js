@@ -1,8 +1,8 @@
 const models = require("../models");
 
 const getAllData = async (query) => {
-    let limit = query.page == 0 ? null : 3;
-    let page = query.page < 2 ? 0 : query.page;
+  const limit = query.page == 0 ? null : 3;
+  const page = query.page < 2 ? 0 : query.page;
   const data = await models.Product.findAll({
     include: [
       {
