@@ -50,18 +50,6 @@ const mailParse = async (req, res, next) => {
   try {
     const { params: payload } = req;
     const data = await userService.mailParse(payload);
-    console.log(data);
-    res.data = data;
-    next();
-  } catch (error) {
-    console.log(error);
-    commonErrorHandler(req, res, error.message, 400, error);
-  }
-};
-
-const getData = async (req, res, next) => {
-  try {
-    const data = await userService.getData();
     res.data = data;
     next();
   } catch (error) {
@@ -115,15 +103,39 @@ const userDetailById = async (req, res, next) => {
    }
 }
 
+const forgetPassword = async (req, res, next) => {
+  try {
+    const { body: payload } = req;
+    const data = await userService.forgetPassword(payload);
+    res.data = data;
+    next();
+  } catch (error) {
+    commonErrorHandler(req, res, error.message, 400, error);
+  }
+};
+
+const resetPassword= async (req, res, next) => {
+  try {
+    const { body: payload } = req;
+    const params = req.params.token;
+    const data = await userService.resetPassword(payload, params);
+    res.data = data;
+    next();
+  } catch (error) {
+    commonErrorHandler(req, res, error.message, 400, error);
+  }
+};
+
 module.exports = {
   loginUser,
   refreshToken,
   emailFile,
   createUser,
   mailParse,
-  getData,
   deactivateUser,
   userDetail,
   detailById,
   userDetailById,
+  forgetPassword,
+  resetPassword
 };

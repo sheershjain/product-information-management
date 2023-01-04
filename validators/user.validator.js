@@ -50,11 +50,30 @@ const deactivateUserSchema = async (req, res, next) => {
 };
 const userDetailsSchema = async (req, res, next) => {
   const schema = Joi.object({
-    
     id: Joi.string().guid().required(),
   });
   validateRequest(req, res, next, schema, "params");
 };
+const forgetPassword = async (req, res, next) => {
+  const schema = Joi.object({
+    email: Joi.string().email().lowercase().required(),
+  });
+  validateRequest(req, res, next, schema, "body");
+};
+
+const resetPasswordSchema= async (req, res, next) => {
+        const schema = Joi.object({
+            password: passwordComplexity(complexityOptions).required(),
+        })
+        validateRequest(req, res, next, schema, 'body');
+    }
+
+  const resetPasswordSchemaToken= async (req, res, next) => {
+        const schema = Joi.object({
+            token: Joi.string().min(5).required()
+        })
+        validateRequest(req, res, next, schema, 'params');
+    }
 module.exports = {
   loginSchema,
   createUserSchema,
@@ -62,4 +81,8 @@ module.exports = {
   mailParse,
   deactivateUserSchema,
   userDetailsSchema,
+  forgetPassword,
+  resetPasswordSchema,
+  resetPasswordSchema,
+  resetPasswordSchemaToken,
 };

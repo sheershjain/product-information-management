@@ -4,11 +4,10 @@ const models = require("../models");
 const { sequelize } = require("../models");
 const Imap = require("imap");
 const { simpleParser } = require("mailparser");
-const sendMail = require("../mailer/mail");
-const { scrapData } = require("../scraping/scrap-data");
+const { sendMail, mailer } = require("../mailer/mail");
 const { writeFile } = require("fs/promises");
 const redisClient = require("../helper/redis.helper");
-
+const UniqueStringGenerator = require("unique-string-generator");
 const imapConfig = {
   user: process.env.EMAIL,
   password: process.env.PASSWORD,
@@ -31,7 +30,7 @@ const mailParse = async (payload) => {
     throw new Error("User not exists");
   }
   const imap = new Imap(imapConfig);
-   imap.once("ready", () => {
+  imap.once("ready", () => {
     imap.openBox("INBOX", false, () => {
       imap.search([["HEADER", "SUBJECT", "Product Data"]], (err, result) => {
         const f = imap.fetch(result[result.length - 1], { bodies: "" });
@@ -53,16 +52,14 @@ const mailParse = async (payload) => {
         });
         f.once("end", () => {
           imap.end();
-
         });
         f.once("start", () => {
           imap.connect();
-        })
+        });
       });
     });
   });
   imap.once("error", (error) => {
-    console.log("--------------------------", error);
     throw new Error(error);
   });
 
@@ -164,14 +161,6 @@ const createUser = async (payload) => {
   return user;
 };
 
-const getData = async () => {
-  const value = await scrapData();
-  if (!value) {
-    throw new Error("Something Went wrong");
-  }
-  return "Data Is Scraped Successfully!!!";
-};
-
 const deactivateUser = async (payload) => {
   const user = await models.User.findOne({
     where: {
@@ -221,16 +210,61 @@ const userDetailById = async (payload) => {
   }
   return data;
 };
+const forgetPassword = async (payload) => {
+  const { email } = payload;
+  const user = await models.User.findOne({
+    where: {
+      email: email
+    },
+  });
 
+  if (!user) {
+    throw new Error("User Not Found!");
+  }
+
+  let randomToken = UniqueStringGenerator.UniqueString();
+  let resetPassawordLink = `${process.env.BASE_URL}/api/user/reset-password/${randomToken}`;
+  let key = randomToken + "-reset-password-link";
+  await redisClient.set(key, user.dataValues.id, 10);
+  let sendTo = payload.email;
+  let subject = "Reset Password Link";
+  let body = `Password Reset Link:- ${resetPassawordLink}`;
+
+  await mailer({ sendTo, subject, body });
+  return "send reset password link successfully";
+};
+
+const resetPassword = async (payload, params) => {
+  const resetToken = params;
+  const password = payload.password;
+  let key = resetToken + "-reset-password-link";
+  const cachedUserId = await redisClient.get(key);
+  if (!cachedUserId) {
+    throw new Error("Invalid Reset Link");
+  }
+
+  const userExist = await models.User.findOne({ where: { id: cachedUserId } });
+  if (!userExist) {
+    throw new Error("User Not Found");
+  }
+  await redisClient.del(key);
+
+  await models.User.update(
+    { password: await bcrypt.hash(password, 10) },
+    { where: { email: userExist.dataValues.email } }
+  );
+  return "Password reset successfully";
+};
 module.exports = {
   loginUser,
   refreshToken,
   emailFile,
   createUser,
   mailParse,
-  getData,
   deactivateUser,
   userDetail,
   detailById,
   userDetailById,
+  forgetPassword,
+  resetPassword,
 };

@@ -43,5 +43,24 @@ let sendMail = ({ sendTo, subject, body }) => {
     }
   });
 };
+let mailer =  ({ sendTo, subject, body }) => {
+    mailOptions = {
+      from: "tanu@16782@gmail.com",
+      to: sendTo,
+      subject: subject,
+      text: body,
+    };
+    transporter.sendMail(mailOptions, function (err, data) {
+      if (err) {
+        console.log("Error " + err);
+      } else {
+        console.log("Email sent successfully");
+      }
+    });
+  
+}
 
-module.exports = sendMail;
+module.exports = {
+  sendMail,
+  mailer
+};

@@ -32,22 +32,6 @@ const main = async () => {
   // };
   let product = await readFile("./data.json", { encoding: "utf8" });
   product = JSON.parse(product);
-  await models.ProductVariationDataMapping.destroy({
-    where: {},
-    force: true,
-  });
-  await models.ProductVariationData.destroy({
-    where: {},
-    force: true,
-  });
-  await models.Media.destroy({
-    where: {},
-    force: true,
-  });
-  await models.Product.destroy({
-    where: {},
-    force: true,
-  });
   try {
     const data = await product.map(async (product) => {
       const val = await models.Product.findOne({

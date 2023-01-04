@@ -38,4 +38,4 @@ const scrapData = async () => {
   return "true"
 };
 
-module.exports={scrapData};
+scrapData();
