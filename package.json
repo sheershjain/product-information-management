@@ -42,6 +42,7 @@
     "pg": "^8.8.0",
     "postgres": "^3.3.2",
     "prompt": "^1.3.0",
+    "redis": "^4.5.1",
     "unique-string-generator": "^1.0.5"
   },
   "devDependencies": {
