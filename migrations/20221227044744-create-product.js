@@ -17,9 +17,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      offer: {
-        type: Sequelize.INTEGER,
-      },
       sku_id: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -31,8 +28,8 @@ module.exports = {
         allowNull: false,
       },
       model_id: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.UUID,
+        allowNull: true,
       },
       created_at: {
         allowNull: false,

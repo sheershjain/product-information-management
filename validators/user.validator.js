@@ -21,7 +21,7 @@ const loginSchema = async (req, res, next) => {
 
 const createUserSchema = async (req, res, next) => {
   const schema = Joi.object({
-    name: Joi.string.require(),
+    name: Joi.string().required(),
     email: Joi.string().email().lowercase().required(),
     password: passwordComplexity(complexityOptions).required(),
     role: Joi.string().min(1).required(),
@@ -44,13 +44,14 @@ const mailParse = async (req, res, next) => {
 };
 const deactivateUserSchema = async (req, res, next) => {
   const schema = Joi.object({
-    userId: Joi.string().guid().required(),
+    id: Joi.string().guid().required(),
   });
   validateRequest(req, res, next, schema, "body");
 };
 const userDetailsSchema = async (req, res, next) => {
   const schema = Joi.object({
-    userId: Joi.string().guid().required(),
+    
+    id: Joi.string().guid().required(),
   });
   validateRequest(req, res, next, schema, "params");
 };

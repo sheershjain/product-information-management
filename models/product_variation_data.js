@@ -25,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       DataValue: {
-        type: DataTypes.STRING,
-        allowNull:false
+        type: DataTypes.STRING(2048),
+        allowNull: false,
       },
     },
     {

@@ -1,12 +1,11 @@
 const Joi = require("joi");
-const passwordComplexity = require("joi-password-complexity");
 const { validateRequest } = require("../helper/common-function.helper");
 
 const addData = async (req, res, next) => {
   const schema = Joi.object({
-    name: Joi.string.require(),
+    name: Joi.string().required(),
     modelId: Joi.string().guid().required(),
-    price: Joi.number.require(),
+    price: Joi.number().required(),
   });
   validateRequest(req, res, next, schema, "body");
 };

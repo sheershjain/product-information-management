@@ -22,9 +22,9 @@ module.exports = {
         },
       },
       role: {
-        type: Sequelize.STRING,
+        type: Sequelize.ENUM(["SADM", "ADM", "USR"]),
         allowNull: false,
-        defaultValue:'USR'
+        defaultValue: "USR",
       },
       password: {
         type: Sequelize.STRING,
