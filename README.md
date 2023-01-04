@@ -53,8 +53,8 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
     SERVER_PORT=3004
     DB_HOST = Database Host ex localhost:3306
-    DB_DATABASE= Database Name ex UserManagementSystem
-    DB_PORT= Port No on which database is running ex for mysql 3306
+    DB_DATABASE= Database Name ex PIM
+    DB_PORT= Port No on which database is running ex for postgres 3306
     DB_USERNAME= User Name of DB User
     DB_PASSWORD= Paasword of Db User
 
