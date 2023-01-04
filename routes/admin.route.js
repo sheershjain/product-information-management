@@ -24,13 +24,7 @@ router.get(
   controller.User.mailParse,
   genericResponse.sendResponse
 );
-router.get(
-  "/get-data",
-  checkAccessToken,
-  checkRole,
-  controller.User.getData,
-  genericResponse.sendResponse
-);
+
 router.post(
   "/create-user",
   checkAccessToken,
@@ -67,24 +61,18 @@ router.post(
 router.get(
   "/get-all-data",
   checkAccessToken,
+  checkRole,
+  validator.productValidator.getAllData,
   controller.Product.getAllData,
   genericResponse.sendResponse
 );
 
-router.post(
-  "/add-data",
-  checkAccessToken,
-  checkRole,
-  validator.ProductValidator.addData,
-  controller.Product.addData,
-  genericResponse.sendResponse
-);
 
 router.delete(
   "/deactivate-product",
   checkAccessToken,
   checkRole,
-  validator.ProductValidator.deactivateProduct,
+  validator.productValidator.deactivateProduct,
   controller.Product.deactivateProduct,
   genericResponse.sendResponse
 );
@@ -93,7 +81,7 @@ router.patch(
   "/enable-product",
   checkAccessToken,
   checkRole,
-  validator.ProductValidator.enableProduct,
+  validator.productValidator.enableProduct,
   controller.Product.enableProduct,
   genericResponse.sendResponse
 );

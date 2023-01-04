@@ -25,4 +25,18 @@ router.get(
   serialization.userSerialization.userDetail,
   genericResponse.sendResponse
 );
+router.post(
+  "/forget-password",
+  validator.userValidator.forgetPassword,
+  controller.User.forgetPassword,
+  genericResponse.sendResponse
+);
+
+router.post(
+  "/reset-password/:token",
+  validator.userValidator.resetPasswordSchemaToken,
+  validator.userValidator.resetPasswordSchema,
+  controller.User.resetPassword,
+  genericResponse.sendResponse
+);
 module.exports = router;
