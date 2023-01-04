@@ -3,7 +3,9 @@
 PIM is an eCommerce business needing to collect, manage, enrich, and distribute product content to sales and eCommerce channels with speed and efficiency. As well as managing product data, there is also the need to manage and distribute digital assets and various media files.
 
 ## Schema
-![Alt text](/Supbase Schema.png?raw=true "PIM Schema")
+
+![Supbase Schema](https://user-images.githubusercontent.com/114575157/210393190-b626c025-50a5-4476-83dc-b778d92b3cc3.png)
+
 
 ## Requirements
 
