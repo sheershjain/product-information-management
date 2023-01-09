@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  app:
+        image: tanu:latest
+        container_name: tanu_backend
+        networks:
+          - common
+        env_file:
+          - .env
+        depends_on:
+          - redis
+
+        ports:
+            - 3004:3004
+
+  redis:
+        image: redis
+        container_name: redis
+        networks:
+          - common
+        volumes:
+            - ./redis_data:/data/
+        ports:
+            - 6379:6379
+
+networks:
+  common:
+    name: common 
