@@ -1,4 +1,5 @@
 require("dotenv").config({ path: __dirname + "/../.env" });
+const pg = require('pg')
 module.exports = {
   development: {
     username: process.env.DB_USER,
@@ -22,6 +23,6 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
-    dialect: "postgres",
+    dialectModule: pg,
   },
 };
